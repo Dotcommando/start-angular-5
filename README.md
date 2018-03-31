@@ -15,7 +15,7 @@ cd start-angular
 
     npm install
 
-Для for __Yarn__:
+Для __Yarn__:
 
     yarn
 
@@ -27,6 +27,6 @@ cd start-angular
 
 Удачного изучения!
 
-Текст урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie), 
-[страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/page-2),
-[страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/page-3).
+Текст урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon),
+[страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon/page-2),
+[страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon/page-3).
