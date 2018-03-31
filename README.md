@@ -1,27 +1,32 @@
-# AngularListManager
+# Тестовое задание. AngularListManager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+Проект создан с помощью [Angular CLI](https://github.com/angular/angular-cli) версии 1.7.3. Работает на Angular 2/5.
 
-## Development server
+Первый урок находится в ветке __lesson01__.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Как скачать и запустить
 
-## Code scaffolding
+Открываете через контекстное меню bash. Для Windows правый клик в папке -> 'Git bash Here'.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+git clone git@github.com:Dotcommando/EventPlatform.git
+cd start-angular
 
-## Build
+Для __npm__:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+    npm install
 
-## Running unit tests
+Для for __Yarn__:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    yarn
 
-## Running end-to-end tests
+Дальше, для запуска локального сервера используем команду (если после команды дописать параметр __-o__, то откроется браузер и вкладка с запущенным проектом).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    ng serv
 
-## Further help
+Проект доступен в браузере по адресу [http://localhost:4200](http://localhost:4200).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Удачного изучения!
+
+Текст урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie), 
+[страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/page-2),
+[страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/page-3).
