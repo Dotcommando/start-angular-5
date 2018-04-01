@@ -7,7 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FriendDetailComponent } from './friend-detail/friend-detail.component';
 import { FriendsListComponent } from './friends-list/friends-list.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { TransferVarsService } from './transfer-vars.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { AppRoutingModule } from './/app-routing.module';
 	FormsModule,
 	AppRoutingModule
   ],
-  providers: [FriendsService],
+  providers: [FriendsService, TransferVarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
