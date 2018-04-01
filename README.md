@@ -4,6 +4,8 @@
 
 Первый урок находится в ветке __lesson01__.
 
+Второй урок находится в ветке __lesson02__.
+
 ## Как скачать и запустить
 
 Открываете через контекстное меню bash. Для Windows правый клик в папке -> 'Git bash Here'.
@@ -27,6 +29,10 @@ cd start-angular
 
 Удачного изучения!
 
-Текст урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon),
+Тексты 1-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon),
 [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon/page-2),
 [страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/01-inicializaciya-sozdanie-servisa-css-shablon/page-3).
+
+Тексты 2-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing),
+[страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing/page-2),
+[страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing/page-3).

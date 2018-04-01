@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Friend } from '../friend';
 import { FriendsService } from '../friends.service';
@@ -9,15 +9,17 @@ import { TransferVarsService } from '../transfer-vars.service';
 	templateUrl: './friend-detail.component.html',
 	styleUrls: ['./friend-detail.component.css']
 })
-export class FriendDetailComponent {
+export class FriendDetailComponent implements OnInit {
 
 	id: string;
 
 	friends: Friend[];
 
-	friend: Friend; // Временная ссылка на объект Friend в глобальном массиве friends
+	friend: Friend;
 
-	checkReady: number; // Interval проверки существования массива друзей
+	checkReady: number;
+
+	title: string = 'Редактирование';
 
 	getFriends():void {
 		this.friendsService.getFriends().subscribe(result => {this.friends = result;});
@@ -49,6 +51,8 @@ export class FriendDetailComponent {
 			this.selectFriend(this.id);
 			this.transferVarsService.setFriends(this.friends);
 		}, 500);
+
+		this.transferVarsService.setTitle(this.title);
 
 	}
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransferVarsService } from './transfer-vars.service';
 
 
 @Component({
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	title = 'app';
+	
+	title:string = 'Менеджер контактов';
+
+	constructor(private transferVarsService: TransferVarsService) {}
+
 }
