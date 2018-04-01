@@ -1,0 +1,6 @@
+<ul class="friends-list">
+	<li *ngFor="let friend of friends">
+		<span (click)="selectFriend(friend)">{{friend.name}}</span>
+	</li>
+</ul>
+<app-friend-detail [friend]="selectedFriend"></app-friend-detail>
