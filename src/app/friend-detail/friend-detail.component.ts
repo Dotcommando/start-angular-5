@@ -10,8 +10,6 @@ export class FriendDetailComponent {
 
 	@Input() friend: Friend;
 
-	stars: number = 0;
-
 	constructor() { }
 
 }

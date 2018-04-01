@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FriendDetailComponent } from './friend-detail/friend-detail.component';
 import { FriendsListComponent } from './friends-list/friends-list.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FriendsListComponent } from './friends-list/friends-list.component';
   imports: [
     BrowserModule,
 	HttpModule,
-	FormsModule
+	FormsModule,
+	AppRoutingModule
   ],
   providers: [FriendsService],
   bootstrap: [AppComponent]

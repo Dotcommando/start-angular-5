@@ -11,7 +11,7 @@ import { FriendsService } from '../friends.service';
 export class FriendsListComponent implements OnInit {
 	title = 'app';
 	friends: Friend[];
-	selectedFriend: Friend;
+
 	constructor (private friendsService: FriendsService) {
 		
 	}
@@ -23,7 +23,5 @@ export class FriendsListComponent implements OnInit {
 			this.friends = result;
 		});
 	}
-	selectFriend(friend: Friend):void {
-		this.selectedFriend = friend;
-	}
+
 }

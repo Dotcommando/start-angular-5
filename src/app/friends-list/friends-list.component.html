@@ -1,6 +1,5 @@
 <ul class="friends-list">
 	<li *ngFor="let friend of friends">
-		<span (click)="selectFriend(friend)">{{friend.name}}</span>
+		<span><a routerLink="/detail/{{friend._id}}">{{friend.name}}</a></span>
 	</li>
 </ul>
-<app-friend-detail [friend]="selectedFriend"></app-friend-detail>
