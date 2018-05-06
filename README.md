@@ -6,6 +6,8 @@
 
 Второй урок находится в ветке __lesson02__.
 
+Третий урок находится в ветке __lesson03__. Урок пока не завершён.
+
 ## Как скачать и запустить
 
 Открываете через контекстное меню bash. Для Windows правый клик в папке -> 'Git bash Here'.
@@ -36,3 +38,5 @@ cd start-angular
 Тексты 2-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing),
 [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing/page-2),
 [страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/02-komponent-redaktirovaniya-routing/page-3).
+
+Тексты 3-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/)
