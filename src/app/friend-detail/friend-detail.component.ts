@@ -17,18 +17,20 @@ export class FriendDetailComponent implements OnInit {
 
 	friend: Friend;
 
-	checkReady: number;
-
 	title: string = 'Редактирование';
 
 	getFriends():void {
-		this.friendsService.getFriends().subscribe(result => {this.friends = result;});
+		this.friendsService.getFriends().subscribe(result => {
+			this.friends = result;
+			this.id = this.route.snapshot.paramMap.get('id');
+			this.selectFriend(this.id);
+			this.transferVarsService.setFriends(this.friends);
+		});
 	}
 
 	selectFriend(id: string):void {
 
 		this.friend = this.friends.find(friend => friend._id === id);
-		clearInterval(this.checkReady);
 
 	}
 
@@ -41,16 +43,6 @@ export class FriendDetailComponent implements OnInit {
 	ngOnInit() {
 
 		this.getFriends();
-
-		this.id = this.route.snapshot.paramMap.get('id');
-
-		this.checkReady = setInterval(() => {
-			if (this.friends != undefined) {
-				clearInterval(this.checkReady);
-			}
-			this.selectFriend(this.id);
-			this.transferVarsService.setFriends(this.friends);
-		}, 500);
 
 		this.transferVarsService.setTitle(this.title);
 
