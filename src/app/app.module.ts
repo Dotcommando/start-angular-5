@@ -9,13 +9,15 @@ import { FriendDetailComponent } from './friend-detail/friend-detail.component';
 import { FriendsListComponent } from './friends-list/friends-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TransferVarsService } from './transfer-vars.service';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
 	FriendDetailComponent,
-	FriendsListComponent
+	FriendsListComponent,
+	FavoritesComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,11 @@ import { TransferVarsService } from './transfer-vars.service';
 	FormsModule,
 	AppRoutingModule
   ],
-  providers: [FriendsService, TransferVarsService],
+  providers: [FriendsService, TransferVarsService, { provide: 'LOCALSTORAGE', useFactory: getLocalStorage }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function getLocalStorage() {
+	return (typeof window !== "undefined") ? window.localStorage : null;
+}
