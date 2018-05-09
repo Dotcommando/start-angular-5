@@ -8,6 +8,8 @@
 
 Третий урок находится в ветке __lesson03__.
 
+Четвёртый урок находится в ветке __lesson04__. Урок выложен не полностью.
+
 ## Как скачать и запустить
 
 Открываете через контекстное меню bash. Для Windows правый клик в папке -> 'Git bash Here'.
@@ -41,3 +43,5 @@ cd start-angular
 
 Тексты 3-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/), 
 [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/page-2)
+
+Тексты 4-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/)
