@@ -22,8 +22,8 @@
 
 Открываете через контекстное меню bash. Для Windows правый клик в папке -> 'Git bash Here'.
 
-git clone git@github.com:Dotcommando/EventPlatform.git
-cd start-angular
+    git clone git@github.com:Dotcommando/start-angular.git
+    cd start-angular
 
 Для __npm__:
 
