@@ -78,7 +78,7 @@ export class FriendDetailComponent implements OnInit {
 		}
 
 	}
-	
+
 	favoriteChanging():boolean {
 
 		if ((!this.friend) || (!this.friend._id)) {
@@ -109,7 +109,7 @@ export class FriendDetailComponent implements OnInit {
 		return (localStorage.getItem(id) === "true");
 
 	}
-	
+
 	ngOnInit() {
 
 		this.getFriends();

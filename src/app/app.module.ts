@@ -10,6 +10,7 @@ import { FriendsListComponent } from './friends-list/friends-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TransferVarsService } from './transfer-vars.service';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { StarsComponent } from './stars/stars.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     AppComponent,
 	FriendDetailComponent,
 	FriendsListComponent,
-	FavoritesComponent
+	FavoritesComponent,
+	StarsComponent
   ],
   imports: [
     BrowserModule,
