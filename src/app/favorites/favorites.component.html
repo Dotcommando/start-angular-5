@@ -1,3 +1,5 @@
-<p>
-  favorites works!
-</p>
+	<ul class="friends-list">
+		<li *ngFor="let friend of favoriteFriends">
+			<span><a routerLink="/detail/{{friend._id}}">{{friend.name}}</a></span>
+		</li>
+	</ul>

@@ -61,7 +61,7 @@ export class FriendDetailComponent implements OnInit {
 			this.friends = result;
 			this.id = this.route.snapshot.paramMap.get('id');
 			this.selectFriend(this.id);
-			this.friend.favorite = this.checkValInStorage();
+			this.friend.favorite = this.checkValInStorage(this.friend._id);
 		});
 	}
 
@@ -104,15 +104,9 @@ export class FriendDetailComponent implements OnInit {
 
 	}
 
-	checkValInStorage():boolean {
+	checkValInStorage(id: string):boolean {
 
-		let id: string = this.friend._id;
-		let fav: string = "false";
-
-		fav = localStorage.getItem(id);
-
-		if (fav == "true") {return true;}
-		else {return false;}
+		return (localStorage.getItem(id) === "true");
 
 	}
 	
