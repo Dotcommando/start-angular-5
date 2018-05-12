@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../friend';
-import { FriendsService } from '../friends.service';
-import { TransferVarsService } from '../transfer-vars.service';
+import { FriendsService } from 'services';
+import { TransferVarsService } from 'services';
+import { LocalstorageService } from 'services';
 import { FriendsStars } from '../friends-stars';
 
 
@@ -20,7 +21,8 @@ export class FriendsListComponent implements OnInit {
 
 	constructor (
 		private friendsService: FriendsService,
-		private transferVarsService: TransferVarsService
+		private transferVarsService: TransferVarsService,
+		private localstorageService: LocalstorageService
 	) {
 		
 	}
@@ -42,7 +44,11 @@ export class FriendsListComponent implements OnInit {
 	checkStarsInStorage(id: string):number {
 
 		let stars: number = 0;
-		stars = parseInt(localStorage.getItem(id + "-stars"));
+		let obj = this.localstorageService.getValue(id);
+		if (obj === undefined) return 0;
+
+		stars = (obj.stars !== undefined) ? parseInt(obj.stars) : 0;
+
 		return ((stars < 6)&&(stars >= 0))? stars : 0;
 
 	}

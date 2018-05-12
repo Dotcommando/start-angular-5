@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Friend } from './friend';
+import { Friend } from '../friend';
 
 @Injectable()
 export class TransferVarsService {

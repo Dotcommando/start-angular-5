@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TransferVarsService } from './transfer-vars.service';
+import { TransferVarsService } from 'services';
 
 
 @Component({

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LocalstorageService } from 'services';
 
 @Component({
 	selector: 'app-stars',
@@ -14,12 +15,12 @@ export class StarsComponent implements OnInit {
 	setStars(index: number):void {
 
 		this.stars = index;
-		localStorage.setItem(this.id + "-stars", index.toString());
+		this.localstorageService.setValue(this.id, {stars: index});
 
 	}
 
 	constructor(
-		@Inject('LOCALSTORAGE') private localStorage: any
+		private localstorageService: LocalstorageService
 	) { }
 
 	ngOnInit() {

@@ -1,7 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Friend } from '../friend';
-import { FriendsService } from '../friends.service';
-import { TransferVarsService } from '../transfer-vars.service';
+import { FriendsService } from 'services';
+import { TransferVarsService } from 'services';
+import { LocalstorageService } from 'services';
 
 @Component({
   selector: 'app-favorites',
@@ -19,7 +20,7 @@ export class FavoritesComponent implements OnInit {
 	constructor(
 		private friendsService: FriendsService,
 		private transferVarsService: TransferVarsService,
-		@Inject('LOCALSTORAGE') private localStorage: any
+		private localstorageService: LocalstorageService
 	) { }
 
 	getFriends():void {
@@ -33,21 +34,14 @@ export class FavoritesComponent implements OnInit {
 
 		if (this.friends.length <= 0) { return; }
 
-		let that = this;
+		this.friends.forEach((item, i, arr) => {
 
-		this.friends.forEach(function(item, i, arr) {
-
-			if (that.checkValInStorage(item._id)) {
-				that.favoriteFriends.push(item);
-			}
+			if (this.localstorageService.getValue(item._id) === undefined) return;
+			if (this.localstorageService.getValue(item._id).favorite) {
+				this.favoriteFriends.push(item);
+			};
 
 		});
-
-	}
-
-	checkValInStorage(id: string):boolean {
-
-		return (localStorage.getItem(id) === "true");
 
 	}
 

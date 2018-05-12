@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Friend } from './friend';
-import { Http, Response } from '@angular/http'; 
+import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -12,14 +11,14 @@ export class FriendsService {
 
 	public apiHost: string = './assets/generated.json';
 
-	private friends: Friend[];
+	private friends: any;
 
 	private friendsObservable: Observable<any>;
 
-	constructor(private http: Http) {
+	constructor(private http: HttpClient) {
 
 		this.friendsObservable = this.http.get(this.apiHost)
-			.map(response => response.json())
+			.map(response => response)
 			.do(friends => {
 				this.friends = friends;
 			})
