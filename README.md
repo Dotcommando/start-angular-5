@@ -52,4 +52,4 @@
 Тексты 3-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/),
 [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/page-2)
 
-Тексты 4-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/)
+Тексты 4-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/), [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/page-2)
