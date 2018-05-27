@@ -37,9 +37,9 @@ export class StarsService {
 
 	getStars(id: string):number {
 
-		let firndStars = this.stars.find(friend => friend.id == id).stars;
-		firndStars = this.checkStarsInStorage(id);
-		return firndStars;
+		let friendStars = this.stars.find(friend => friend.id == id).stars;
+		friendStars = this.checkStarsInStorage(id);
+		return friendStars;
 
 	}
 
