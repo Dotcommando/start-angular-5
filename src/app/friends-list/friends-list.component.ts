@@ -3,8 +3,6 @@ import { Friend } from '../friend';
 import { FriendsService } from 'services';
 import { TransferVarsService } from 'services';
 import { LocalstorageService } from 'services';
-import { StarsService } from 'services';
-import { FriendsStars } from '../friends-stars';
 
 
 @Component({
@@ -18,13 +16,10 @@ export class FriendsListComponent implements OnInit {
 
 	friends: Friend[];
 
-	stars: Array<FriendsStars> = [];
-
 	constructor (
 		private friendsService: FriendsService,
 		private transferVarsService: TransferVarsService,
-		private localstorageService: LocalstorageService,
-		private starsService: StarsService
+		private localstorageService: LocalstorageService
 	) {
 		
 	}
@@ -38,12 +33,6 @@ export class FriendsListComponent implements OnInit {
 		this.friendsService.getFriends().subscribe(result => {
 			this.friends = result;
 		});
-	}
-
-	getStars(id: string):number {
-
-		return this.starsService.getStars(id);
-
 	}
 
 }

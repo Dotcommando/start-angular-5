@@ -10,10 +10,12 @@ import { FriendsListComponent } from './friends-list/friends-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { StarsComponent } from './stars/stars.component';
 
-import { FriendsService } from 'services';
-import { TransferVarsService } from 'services';
-import { LocalstorageService } from 'services';
-import { StarsService } from 'services';
+import {
+	FriendsService,
+	TransferVarsService,
+	LocalstorageService,
+	StarsService
+} from 'services';
 
 
 @NgModule({
