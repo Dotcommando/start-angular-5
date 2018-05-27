@@ -2,19 +2,19 @@
 
 Проект создан с помощью [Angular CLI](https://github.com/angular/angular-cli) версии 1.7.3. Работает на Angular 2/5.
 
-Первый урок находится в ветке __lesson01__. Переключится на урок можно bash-командой:
+Первый урок находится в ветке __lesson01__. Переключится на урок можно командой:
 
     git checkout lesson01
 
-Второй урок находится в ветке __lesson02__. Переключится на урок можно bash-командой:
+Второй урок находится в ветке __lesson02__. Переключится на урок можно командой:
 
     git checkout lesson02
 
-Третий урок находится в ветке __lesson03__. Переключится на урок можно bash-командой:
+Третий урок находится в ветке __lesson03__. Переключится на урок можно командой:
 
     git checkout lesson03
 
-Четвёртый урок находится в ветке __lesson04__. Урок выложен не полностью. Переключится на урок можно bash-командой:
+Четвёртый урок находится в ветке __lesson04__. Переключится на урок можно командой:
 
     git checkout lesson04
 
@@ -52,4 +52,4 @@
 Тексты 3-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/),
 [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/03-komponent-izbrannykh/page-2)
 
-Тексты 4-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/), [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/page-2)
+Тексты 4-го урока: [страница 1](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/), [страница 2](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/page-2), [страница 3](http://dev.hive.pro/courses/angular-2-5-testovoe-zadanie/04-komponent-ocenki-zvezdochki/page-3)
