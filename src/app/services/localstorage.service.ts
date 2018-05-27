@@ -5,7 +5,7 @@ export class LocalstorageService {
 	private STORAGE_KEY: string = 'list-manager-v-01';
 	
 	constructor( private defaults: any ) {
-		if( !localStorage[this.STORAGE_KEY] || !JSON.parse( localStorage[this.STORAGE_KEY] )){
+		if ( !localStorage[this.STORAGE_KEY] || !JSON.parse( localStorage[this.STORAGE_KEY] )) {
 			this.setAll(defaults);
 		}
 	}

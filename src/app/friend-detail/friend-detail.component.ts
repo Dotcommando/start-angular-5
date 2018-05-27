@@ -13,7 +13,7 @@ import { LocalstorageService } from 'services';
 export class FriendDetailComponent implements OnInit {
 
 	id: string;
-	
+
 	isFavorite = false;
 
 	friends: Friend[];

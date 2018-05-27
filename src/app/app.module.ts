@@ -13,6 +13,7 @@ import { StarsComponent } from './stars/stars.component';
 import { FriendsService } from 'services';
 import { TransferVarsService } from 'services';
 import { LocalstorageService } from 'services';
+import { StarsService } from 'services';
 
 
 @NgModule({
@@ -32,7 +33,11 @@ import { LocalstorageService } from 'services';
 	providers: [
 		FriendsService,
 		TransferVarsService,
-		{provide: LocalstorageService, useFactory: getLocalstorage }
+		StarsService,
+		{
+			provide: LocalstorageService,
+			useFactory: getLocalstorage
+		}
 	],
 	bootstrap: [AppComponent]
 })

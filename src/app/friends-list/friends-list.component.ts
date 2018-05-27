@@ -3,6 +3,7 @@ import { Friend } from '../friend';
 import { FriendsService } from 'services';
 import { TransferVarsService } from 'services';
 import { LocalstorageService } from 'services';
+import { StarsService } from 'services';
 import { FriendsStars } from '../friends-stars';
 
 
@@ -22,7 +23,8 @@ export class FriendsListComponent implements OnInit {
 	constructor (
 		private friendsService: FriendsService,
 		private transferVarsService: TransferVarsService,
-		private localstorageService: LocalstorageService
+		private localstorageService: LocalstorageService,
+		private starsService: StarsService
 	) {
 		
 	}
@@ -35,27 +37,12 @@ export class FriendsListComponent implements OnInit {
 	getFriends():void {
 		this.friendsService.getFriends().subscribe(result => {
 			this.friends = result;
-			this.friends.forEach((item) => {
-				this.stars.push({id: item._id, stars: this.checkStarsInStorage(item._id)});
-			});
 		});
-	}
-
-	checkStarsInStorage(id: string):number {
-
-		let stars: number = 0;
-		let obj = this.localstorageService.getValue(id);
-		if (obj === undefined) return 0;
-
-		stars = (obj.stars !== undefined) ? parseInt(obj.stars) : 0;
-
-		return ((stars < 6)&&(stars >= 0))? stars : 0;
-
 	}
 
 	getStars(id: string):number {
 
-		return this.stars.find(friend => friend.id == id).stars;
+		return this.starsService.getStars(id);
 
 	}
 

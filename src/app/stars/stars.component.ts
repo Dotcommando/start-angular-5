@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LocalstorageService } from 'services';
+import { StarsService } from 'services';
 
 @Component({
 	selector: 'app-stars',
@@ -8,9 +9,14 @@ import { LocalstorageService } from 'services';
 })
 export class StarsComponent implements OnInit {
 
-	@Input() stars: number;
+	private stars: number;
 
 	@Input() id: string;
+
+	constructor(
+		private localstorageService: LocalstorageService,
+		private starsService: StarsService
+	) { }
 
 	setStars(index: number):void {
 
@@ -19,11 +25,8 @@ export class StarsComponent implements OnInit {
 
 	}
 
-	constructor(
-		private localstorageService: LocalstorageService
-	) { }
-
 	ngOnInit() {
+		this.stars = this.starsService.getStars(this.id);
 	}
 
 }
