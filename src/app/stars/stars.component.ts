@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LocalstorageService } from 'services';
-import { StarsService } from 'services';
+import { LocalstorageService, StarsService } from 'services';
 
 @Component({
 	selector: 'app-stars',

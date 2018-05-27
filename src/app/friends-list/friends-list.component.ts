@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../friend';
-import { FriendsService } from 'services';
-import { TransferVarsService } from 'services';
-import { LocalstorageService } from 'services';
+import { FriendsService, TransferVarsService, LocalstorageService } from 'services';
 
 
 @Component({
