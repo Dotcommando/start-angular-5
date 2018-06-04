@@ -9,6 +9,11 @@ import { FriendDetailComponent } from './friend-detail/friend-detail.component';
 import { FriendsListComponent } from './friends-list/friends-list.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { StarsComponent } from './stars/stars.component';
+import { SearchComponent } from './search/search.component';
+
+import { SearchPipe } from 'pipes';
+
+import { SearchDirective } from 'directives';
 
 import {
 	FriendsService,
@@ -24,7 +29,10 @@ import {
 		FriendDetailComponent,
 		FriendsListComponent,
 		FavoritesComponent,
-		StarsComponent
+		StarsComponent,
+    SearchComponent,
+    SearchPipe,
+    SearchDirective
 	],
 	imports: [
 		BrowserModule,
@@ -36,6 +44,7 @@ import {
 		FriendsService,
 		TransferVarsService,
 		StarsService,
+    SearchPipe,
 		{
 			provide: LocalstorageService,
 			useFactory: getLocalstorage
@@ -47,6 +56,6 @@ export class AppModule { }
 
 export function getLocalstorage() {
 	return new LocalstorageService( {
-		
+
 	} );
 }
