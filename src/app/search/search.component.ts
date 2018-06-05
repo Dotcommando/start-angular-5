@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { Friend } from '../friend';
 import { TransferVarsService } from 'services';
 
@@ -10,6 +10,16 @@ import { TransferVarsService } from 'services';
 export class SearchComponent implements OnInit {
 
 	@Input() friends: Friend[] = [];
+
+	@ViewChild('searchField') searchField: ElementRef;
+
+  // @HostListener('click', ['$event.target']) onClick(target) {
+  //   if (target.classList[0] === 'tip-link') {
+  //     this.filteredFriends = [];
+  //     this.searchField.nativeElement.value = '';
+  //     this.searchField.nativeElement.keyup();
+  //   }
+  // }
 
 	filteredFriends: Friend[] = this.friends;
 

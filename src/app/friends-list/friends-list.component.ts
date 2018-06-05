@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../friend';
-import { FriendsService, TransferVarsService, LocalstorageService } from 'services';
+import {
+  FriendsService,
+  TransferVarsService,
+  LocalstorageService
+} from 'services';
 
 
 @Component({
@@ -19,17 +23,18 @@ export class FriendsListComponent implements OnInit {
 		private transferVarsService: TransferVarsService,
 		private localstorageService: LocalstorageService
 	) {
-		
+
 	}
-	
+
 	ngOnInit() {
 		this.getFriends();
 		this.transferVarsService.setTitle(this.title);
 	}
-	
+
 	getFriends():void {
 		this.friendsService.getFriends().subscribe(result => {
 			this.friends = result;
+      this.transferVarsService.setFriends(result);
 		});
 	}
 

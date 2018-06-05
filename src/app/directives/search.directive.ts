@@ -10,7 +10,7 @@ export class SearchDirective implements OnChanges {
 	@Input() friends: Friend[];
 	@Output() filterEvent: EventEmitter<any> = new EventEmitter();
 
-	searchTerm: string;
+  @Input() searchTerm: string;
 
 	@HostListener('keyup', ['$event.target.value']) onKeyUp(value) {
 		this.searchTerm = value;

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../friend';
-import { FriendsService } from 'services';
-import { TransferVarsService } from 'services';
-import { LocalstorageService } from 'services';
+import {
+  FriendsService,
+  TransferVarsService,
+  LocalstorageService
+} from 'services';
 
 @Component({
   selector: 'app-favorites',
@@ -27,6 +29,7 @@ export class FavoritesComponent implements OnInit {
 		this.friendsService.getFriends().subscribe(result => {
 			this.friends = result;
 			this.fillFavoriteFriends();
+      this.transferVarsService.setFriends(this.favoriteFriends);
 		});
 	}
 
@@ -43,12 +46,14 @@ export class FavoritesComponent implements OnInit {
 
 		});
 
+
+
 	}
 
 	ngOnInit() {
 
 		this.getFriends();
-		
+
 		this.transferVarsService.setTitle(this.title);
 
 	}
